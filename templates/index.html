@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>RGB Color Mixer</title>
+  </head>
+  <body>
+    <h1>RGB Color Mixer</h1>
+    <form method="post">
+      <label>Red:</label>
+      <input type="number" name="red" min="0" max="255" required>
+      <br>
+      <label>Green:</label>
+      <input type="number" name="green" min="0" max="255" required>
+      <br>
+      <label>Blue:</label>
+      <input type="number" name="blue" min="0" max="255" required>
+      <br>
+      <input type="submit" value="Mix">
+    </form>
+    {% if mixed_color %}
+      <h2>Mixed Color:</h2>
+      <p style="background-color:rgb({{ mixed_color[0] }}, {{ mixed_color[1] }}, {{ mixed_color[2] }}); padding: 10px;">{{ mixed_color }}</p>
+    {% endif %}
+  </body>
+</html>
